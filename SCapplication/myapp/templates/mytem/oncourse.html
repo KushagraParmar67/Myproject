@@ -1,0 +1,269 @@
+{% extends "mytem/master.html" %}
+{% block ABC %}
+{% if res %}
+{% for i in res %}
+ <!-- Header Start https://www.sendtransfer.com/download.php?id=004b3ea3cfaa71793c35f960c70a9fac-->
+ <div class="container-fluid page-headers" style="background-image: url(/static/mycss/images/javacourseimage.jpg);">
+    <div class="container">
+        <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+            <h3 class="display-4 text-uppercase" style="text-shadow: 3px 3px white;color: black;">{% for j in i.kush %}
+                {{j.Course_name}}
+            </h3>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+<!-- Courses Start -->
+<div class="container-fluid pb-5 px-sm-3 px-lg-5" style="background: rgb(253, 247, 248);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-8">
+                <div class="course-single-details-left-content bg-white">
+                    <div class="overview-content">
+                        <h1 class="course_overview_title">Overview</h1>
+                        <hr>
+                        <div class="overview-content-in">
+                            <div class="why_learn_container">
+                                <div class="why_learn_title">
+                                    <h1 class="why_learn_heading"> What will you learn</h1>
+                                </div>
+                                <div class="what_learn_details">
+                                    <div class="row">
+                                       <div class="col-12 col-sm-6 courses-list-contr">
+                                        {% for k in i.Review %}
+                                            <div class="d-flex courses_list_style">
+                                                        <div><i class="uil uil-check-circle" style="color: #01FD8E"></i>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <!-- <p> Understand the C# and  .NET CORE and its architecture.</p> -->
+                                                          
+                                                            <p>{{k.Course_overview}}</p>
+                                                        </div>
+                                                    </div>{% endfor %}
+                                                     
+                                                  </div> 
+                                    </div>
+                                </div>
+                            </div>
+                  <p class="courses_midle_content">Are you looking for a comprehensive .NET course to enhance your programming skills? Look no further! Our .NET course is designed to equip you with the knowledge and practical experience you need to master this powerful framework. </p>  </div>
+                    </div>
+                    <div class="course-description-contant">
+                        <h1 class="course-description-heading">This course includes: </h1>
+                        <div class="row course-description-contant-in">
+                            <div class="courses_duretion_innerpart col-6">
+                                <h5 class="courses_inner_text"><i class="fa fa-video-camera mr-2"
+                                        aria-hidden="true"></i> {{j.Course_time}} Video Lectures </h5>
+                            </div>
+                            <div class="courses_duretion_innerpart col-6">
+                                <h5 class="courses_inner_text"><i class="fa fa-users mr-2" aria-hidden="true"></i>
+                                    2 Quizzes </h5>
+                            </div>
+                            <div class="courses_duretion_innerpart col-6">
+                                <h5 class="courses_inner_text"><i class="fa fa-download mr-2" aria-hidden="true"></i>
+                                    1 Downloadable Resources
+                                </h5>
+                            </div>
+                            <div class="courses_duretion_innerpart col-6">
+                                <h5 class="courses_inner_text"><i class="fa fa-clock-o mr-2" aria-hidden="true"></i>
+                                    Full Lifetime Access
+                                </h5>
+                            </div>
+                            <div class="courses_duretion_innerpart col-6">
+                                <h5 class="courses_inner_text"><i class="fa fa-user mr-2" aria-hidden="true"></i>
+                                    Certificate of Completion
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course_content_container">
+                        <h1 class="course_content_heading">Course content </h1>
+                        <div class="course_first_title">
+                            <h2 class="courses_first_heading">45-50 Hours total length</h2>
+                        </div>
+                    
+                        <div class="course_overviews_container">
+                            <div class="course_container_toggle">
+                                
+
+                                <div class="accordion" id="accordionExample">
+                                    <h3 class="course-video-container d-flex"> Courses overview</h3>
+                                    
+                                     <div class="accordion-item">{% for s in i.Demo %}
+                                       {% if request.session.logged %}
+                                        <a href="/payment/{{j.id}}">
+                                            {% else %} 
+                                            <a href="/login"> 
+                                                {% endif %}
+                                                <h2 class="accordion-header" id="heading1">
+                                                    <button class="accordion-button collapsed"  style="margin-bottom: -2px;margin-top: 0px;" type="button">
+                                                       {{s.Course_QA}}
+                                                    </button>
+                                                </h2>
+                                                
+                                        </a>{% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="course_reviews mt-5">
+                        <div class="course_reviews_description">
+                            <div class="course_reviews_title">
+                                <span class="star_heading"><i class="fa fa-star" aria-hidden="true"
+                                        style="color:orange;"></i>
+                                    Course rating</span>
+
+                            </div>
+                            <div class="row">
+                                                                        <div class="col-12 col-md-6" id="courses_rating_main">
+                                        <hr class="under_line">
+                                                     {% for r in i.rateview %}                                                                                       <div class="courses_review_part">
+                                                    <div class="courses_first_block">
+                                                        <div class="first_block_decription">
+                                                            <div class="first_block_namepart">
+                                                                <div class="first_block_logo"> ! </div>
+                                                                <div class="first_block_name">
+                                                                    <p class="name_main_part">{{r.Course_ratername}}</p>
+                                                                    <div class="reviws_part">
+                                                                        <span class="ud-sr-only">Rating:
+                                                                            {{r.Course_rate}}
+                                                                            out of 5</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="first_block_dot">!</div>
+                                                            </div>
+                                                            <div class="first_block_report">
+                                                                {{r.Course_rateview}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>{% endfor %}
+                                                                                                                                                                                            <div class="courses_review_part">
+                                                    <div class="courses_first_block">
+                                                        <div class="first_block_decription">
+                                                            
+                                                                
+                                                            
+                                                      
+                                                        </div>
+                                                    </div>
+                                                </div>                                                                                    </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <div class="course-single-details-right-content">
+                    <div class="course-info-box bg-white">
+                                                        <div
+                                class="video-area-left position-relative d-flex align-items-center justify-content-center">
+                                <div class="course-info-video-img">
+                                    <video class="java-course-videom" controlsList="nodownload" controls  loop
+                                        muted>
+                                        <source src="{{i.Course_video}}"
+                                            type="video/mp4">
+                                    </video>
+                                </div>
+                                <hr>
+                            </div>
+                                                    <div class="course_left_side_contant">
+                            <div
+                                class="course-price-box d-flex justify-content-between align-items-center mt-30 mb-30">
+                                <div class="d-flex align-items-center mb-1">
+                                    <h5 class="m-0"><i class="fa fa-inr" id="payment"
+                                            aria-hidden="true">{{j.Course_price}}</i>
+                                    </h5>
+                                </div>
+                                <div class="course-includes-box course-includes-box-top">
+                                    <span>Course Price</span>
+                                </div>
+                            </div>
+                            <div class="courses_duretion_firstpart">
+                                <div class="courses_duretion_innerpart">
+                                    <h5 class="courses_inner_text"><i class="fa fa-clock-o mr-2"
+                                            aria-hidden="true"></i>
+                                        Course Duration <span class="float-right"
+                                            id="courses_time_value">
+                                           {{j.Course_time}}
+                                        </span> </h5>
+                                </div>
+                                                                                                                    <div class="courses_duretion_innerpart">
+                                            <h5 class="courses_inner_text"><i class="fa fa-signal mr-2"
+                                                    aria-hidden="true"></i>
+                                                Course Level <span class="float-right"
+                                                    id="courses_time_value">Higher</span>
+                                            </h5>
+                                        </div>
+                                        <div class="courses_duretion_innerpart">
+                                            <h5 class="courses_inner_text"><i class="fa fa-files-o mr-2"
+                                                    aria-hidden="true"></i>
+                                                Language <span class="float-right"
+                                                    id="courses_time_value">English/Hindi</span>
+                                            </h5>
+                                        </div>
+                                                                                                        </div>
+                                                                <a href='/payment/{{j.id}}'>
+                                    <button class=" theme-btn theme-button1 theme-button3 w-100 mb-30 addToCart"
+                                        data-bundle_id="5" data-route="">
+                                        Buy the course
+                                    </button>
+                                </a>
+                                                            <div class="course-info-box-wishlist-btns d-flex">
+                                <div class="col-5 wishlist-share-course " id="wishlist-container">
+                                    <!-- <form action="" method="post"> -->
+                                        <input type="hidden" name="course_id" value="1">
+                                        <input type="hidden" name="_token" value="GsKFbXb0FXz9nPn0ITPdk7BsNr4OtjXepTjaGkYG">                                            
+                                    </a>
+                                <!-- </form> -->
+                                </div>
+    
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- Courses End -->
+
+<div class="container_share_course" id="user-share">
+    <div class="share-forms">
+        <div class="share-container" id="user-share">
+            <h1 class="share-course-heading">Share This Course</h1>
+            <span class="close" style="color: rgb(146, 146, 146);"
+                onclick="document.getElementById('user-share').style.display='none' ">&times;</span>
+            <hr>
+            <div class="java-course-share" id="user-share">
+                <div class="d-flex justify-content-between share-links-container">
+                    <div class="share-all-links-container" style="color: #7301FD;">
+                        <a href="https://www.facebook.com/shivagautamconcept/"><i class="uil uil-facebook-f"
+                                style="color: #7301FD;"></i></a>
+                    </div>
+                    <div class="share-all-links-container" style="color: #D6254B;">
+                        <a href="https://www.instagram.com/shiva.gtmscs/"><i class="uil uil-instagram"
+                                style="color: #D6254B;"></i></a>
+                    </div>
+                    <div class="share-all-links-container" style="color: #FD3001;">
+                        <a href="https://www.youtube.com/shivaconceptsolution"><i class="uil uil-youtube"
+                                style="color: #FD3001;"></i></a>
+                    </div>
+                    <div class="share-all-links-container" style="color: #2538D6;">
+                        <a href="https://www.linkedin.com/in/shivagtm/"><i class="uil uil-linkedin"
+                                style="color: #2538D6;"></i></a>
+                    </div>
+                    <div class="share-all-links-container" style="color: black;">
+                        <a href="https://github.com/shivaconceptsolution"><i class="uil uil-github"
+                                style="color: black;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

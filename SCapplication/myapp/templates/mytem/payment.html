@@ -1,0 +1,60 @@
+{% extends "mytem/master.html" %}
+
+{% block ABC %}
+{% for i in course %}
+{% for j in i.kush %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+            
+            <div class="panel panel-default" style="margin-top: 30px;">
+                <div class="panel-heading">
+                                                <form action="" method="POST">
+                                                    {% csrf_token %}
+                            <input type="hidden" name="_token" value="ArefLO7TnKpeUpFBHPniPb58hs96zvRtS7tUZlv3">                                <div class="student_payment_option">
+                                <h1>SAFELY PAYMENT TO SHIVA CONCEPT DIGIAL </h1>
+
+                                <div class="student_payments_part">
+                                    <div class="form-group">
+                                        <label for="">Name</label>
+                                        <input type="text" name="name" class="form-control"
+                                            placeholder="Enter Your Name" aria-describedby="helpId" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Email Address</label>
+                                        <input type="email" name="email" class="form-control"
+                                            placeholder="Enter Your email" aria-describedby="helpId">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Contact</label>
+                                        <input type="contact" name="contact" class="form-control"
+                                            placeholder="Enter Your contact" aria-describedby="helpId" required>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="">Course Price</label>
+                                        <input type="payment" name="payment" class="form-control"
+                                            value="{{j.Course_price}}"
+                                            aria-describedby="helpId" readonly >
+                                            <input type="hidden"  name="Course_name" value="{{j.Course_PName}}">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button class="btn-primary h4 rounded" type="submit">Payment Now</button>
+                            <!-- <script src="https://checkout.razorpay.com/v1/checkout.js" class="btn-primary" data-key="rzp_live_7euwNePnomy6IE"
+                                data-amount="{{j.price}}00" data-buttontext="Payment Now"
+                                data-name="shiva concept digital" data-description="Payment" data-prefill.name="" data-prefill.email=""
+                                data-theme.color="#ff7529"></script></button> -->
+
+
+                        </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,474 @@
+{% extends 'mytem/master.html' %}
+
+
+
+{% block ABC %}
+
+
+{% if res %}
+<script>
+    alert('Registration Successfull')
+</script>
+{% endif %}
+
+
+{% if keyofpay %}
+<script>
+    alert(`Your Course Purchased You can Check it on Your Courses Section {{keyofpay}}`)
+</script>
+{% endif %}
+
+
+{% if logg %}
+<script>
+    alert('{{logg}}')
+    console.log('{{logg}}')
+
+</script>
+{% endif %}
+
+<!-- Carousel Start -->
+  <div class="container-fluid p-0 pb-3 mb-3">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="min-height: 200px;">
+                <img class="img-fluid position-relative w-100" src="/static/mycss/images/logo8.png" style="object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Courses Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="text-center mb-5">
+
+            <h1>Our Popular Courses</h1>
+        </div>
+        <div class="row">
+{% for i in Course %}
+            <div class="col-lg-3 col-md-6 mb-4">
+                <a class="h5" href="/oncourse/{{i.id}}" id="courses_title_first">
+                    <div class="rounded overflow-hidden mb-2">
+                        <div class="courses-image-hight">
+                            <img class="img-fluid" style="height: 100%; width:100%;" src="/static/mycss/DBimages/{{i.Course_image}}" alt="">
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i
+                                            class="fa fa-users text-primary mr-2"></i>{{i.Course_students}} Students</small>
+                                <small class="m-0"><i
+                                            class="far fa-clock text-primary mr-2"></i>{{i.Course_time}}</small>
+                            </div>
+                            <div class="courses_container_main">
+                                {{i.Course_name}}
+                            </div>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <div class="row" id="courses_row_price_part">
+                                        <div class="courses_price_first">
+                                            <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>{{i.Course_rating}}
+
+                                            </h6>
+                                        </div>
+                                        <div class="courses_price_second">
+                                            <h5 class="m-0" style="font-size: 16px;"><i class="fa fa-inr" aria-hidden="true"></i> {{i.Course_price}}
+                                            </h5>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>{% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid m-0 py-5" style="background-color: #f8f8fd;">
+    <div class="container">
+        <div class="content_fisrt_title">
+            <h6>Our Online Bootcamp</h6>
+            <h1 id="our_students">An immersive learning experience</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3" id="part_content">
+                <div class="contents_title_second">
+                    <div class="career_grouth_div">
+                        <img src="/static/mycss/images/png2.png" alt="img" class="class_training_img2">
+                    </div>
+                    <div class="second_title_details">
+                        <h6 class="second_title">Industry experts</h6>
+                        <p class="description_second">Learn from current industry professionals
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3" id="part_content">
+                <div class="contents_title_second">
+                    <div class="career_grouth_div">
+                        <img src="/static/mycss/images/png1.png" alt="img" class="class_training_img1">
+                    </div>
+                    <div class="second_title_details">
+                        <h6 class="second_title">Skill Enhancement</h6>
+                        <p class="description_second">Level up your skills to boost your career
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3" id="part_content">
+                <div class="contents_title_second">
+                    <div class="career_grouth_div">
+                        <img src="/static/mycss/images/png3.png" alt="img" class="class_training_img3">
+                    </div>
+                    <div class="second_title_details">
+                        <h6 class="second_title">Unlimited Access </h6>
+                        <p class="description_second">To a digital learning resource </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3" id="part_content">
+                <div class="contents_title_second">
+                    <div class="career_grouth_div">
+                        <img src="/static/mycss/images/png4.png" alt="img" class="class_training_img4">
+                    </div>
+                    <div class="second_title_details">
+                        <h6 class="second_title">Learning Assistants </h6>
+                        <p class="description_second">To help when you're stuck </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- why join us -->
+<div class="container-fluid bg-whyjoinus">
+    <div class="container">
+        <div class="row align-items-center py-24 px-0 mb-5">
+            <div class="col-lg-6 mb-lg-0" id="why_join_us_hompage_mainpart">
+                <div class="">
+                    <div class="why_join_us_hompage">
+                        Why Join Us?</div>
+                    <h1 class="text-black" id="our_students">Best students deserve great job.</h1>
+                </div>
+                <p class="text-black mt-4">"SHIVA CONCEPT DIGITAL gets it done"</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="card border-0">
+                    <div class="whyjoinus_container">
+                        <div class="whyjoin_reviews_first">
+                            <div class="child_part_whyjoin">
+                                <h1 class="why_ranking">250+</h1>
+                                <p class="why_titles">Placed as a Python Developer</p>
+                            </div>
+                            <div class="child_part_whyjoin">
+                                <h1 class="why_ranking">100+</h1>
+                                <p class="why_titles">Placed as a Java Developer</p>
+                            </div>
+                        </div>
+                        <div class="whyjoin_reviews_second">
+                            <div class="child_part_whyjoin1">
+                                <h1 class="why_ranking">500+</h1>
+                                <p class="why_titles">Placed in startups</p>
+                            </div>
+                            <div class="child_part_whyjoin1">
+                                <h1 class="why_ranking">50+</h1>
+                                <p class="why_titles">Student received Top MNC JOB OFFERS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- why join us -->
+
+
+<!-- Registration Start -->
+<div class="container-fluid bg-registration py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/static/mycss/images/signin.png), no-repeat center center;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+            </div>
+            <div class="col-lg-5">
+                <div class="card border-0">
+                    <div class="card-header bg-light text-center p-4">
+                        <h1 class="m-0">Have Any Query</h1>
+                    </div>
+                    <div class="card-body rounded-bottom bg-primary p-5">
+                        <form action="/contact" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="_token" value="mthokn96IJeg5AFhOahnrNcJFjIoSIts5XENpGqZ">
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0 p-4" placeholder="Your name" name="name" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control border-0 p-4" placeholder="Your email" name="email" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="mobile" class="form-control border-0 p-4" placeholder="Your mobile" name="mobile" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0 p-4" placeholder="Message" name="message" required="required" />
+
+                            </div>
+                            <div>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Request
+                                    Callback</button>
+                            </div>
+                        </form>
+                    </div>
+                    {% if key %}
+                    <script>
+                            window.alert("Call for inqury Success")
+                    </script>{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Registration End -->
+
+<!-- company-tiaup -->
+<div class="container-fluid bg-registrations" style="background-color:#f8f8fd">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <div class="" id="students_are_placed_at">
+                    <h1 class="text-black" id="our_students">Our students are placed at </h1>
+                    <p class="text-black" id="our_guidance">With our guidance, Our students achieve remarkable career placements, securing rewarding positions.
+                    </p>
+                </div>
+                <a href="/course"> <button id="checkout_courses">Checkout courses</button>
+                </a>
+            </div>
+            <div class="col-lg-7">
+                <div class="card border-0" style="background-color: #f8f8fd;">
+                    <div class="company_taiups_container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="company_title">
+
+                                </div>
+                                <div class="company_taiups_details">
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/calsoft.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/capgemini.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/tcs.jpg" alt="company_png" class="all-company-logo" id="tcs_company">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/wipro.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/accenture.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/hcl.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/infosys.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/beyond key.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                    <div class="company_details">
+                                        <img src="/static/mycss/images/techmahindra.png" alt="company_png" class="all-company-logo">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- company-tiaup End -->
+
+<!-- Testimonial Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1 id="our_students">About your instructor</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="sir">
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">"I am Shiva Gautam, I am a teacher and entrepreneur for the past 12 years, I am managing the Software development company Kangaroo Software PVT LTD and the best Software Education Institute SHIVA CONCEPT Digital.I am very much
+                            passionate about teaching and helping students. So I am provide this Shivaconceptdigital.com platform which is the best digital training platform for Students on affordable fee structure under the guidance of me Whether
+                            you're new to programming or looking to take your skills to the next level, I am here to guide you every step of the way.</h4>
+                        <img class="img-fluid mx-auto mb-3" src="/static/mycss/images/shivasir.png" alt="shivasir-image" id="shivasir_image">
+                        <h5 class="m-0">Shiva Gautam</h5>
+                        <span style="color:black">12+ years of experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+<!-- frequently Start -->
+<div class="frequently mt-5">
+    <div class="container" id="freque-container">
+        <div class="frequently col-12 col-md-12 col-lg-12 col-sm-12">
+            <div class="frequently-title">
+                <h1 class="frequently-text1" id="our_students">Frequently Asked Questions</h1>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle1" class="accordion-toggle1" name="toggle">
+                    <label for="toggle1"> What type of organization is Shiva Concept Digital?</label>
+                    <div class="accordion-content">
+                        <p>Shiva Concept Digital is the software training institute, established from 2013 in Indore India, We are providing programming languages training services from past 10 years, we have trained 20000+ students, we have conducted
+                            500+ workshops and seminar in 100+ engineering colleges.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle2" class="accordion-toggle1" name="toggle">
+                    <label for="toggle2">Why should I choose Shiva Concept Digital?</label>
+                    <div class="accordion-content">
+                        <p>Firstly, our institute has a team of highly experienced and skilled trainers who are passionate about teaching and have a deep understanding of the latest industry trends and technologies. They are committed to providing personalized
+                            attention and guidance to each student, ensuring that they are equipped with the knowledge and skills required to excel in their careers.
+                        </p>
+                        <p>Secondly, we offer a comprehensive and up-to-date curriculum that is designed to meet the needs of the industry. Our courses are regularly updated to reflect the latest trends and technologies, ensuring that our students are
+                            always at the forefront of the field.
+                        </p>
+                        <p>Thirdly, we provide a supportive and collaborative learning environment that encourages students to ask questions, share ideas, and work together to solve problems. Our institute is equipped with state-of-the-art facilities
+                            and resources, including advanced software and hardware, to ensure that our students have access to the best possible learning experience.
+                        </p>
+                        <p>Lastly, we are committed to providing affordable and flexible learning options that cater to the needs of our students. We offer a range of courses and programs, including online and offline classes, to ensure that our students
+                            can learn at their own pace and convenience.
+                        </p>
+                        <p>In summary, if you choose SHIVA CONCEPT Digital, you can be assured of receiving high-quality training, a comprehensive curriculum, a supportive learning environment, and flexible learning options that will help you achieve
+                            your goals in the field of programming.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle3" class="accordion-toggle1" name="toggle">
+                    <label for="toggle3"> how many type of courses in Shiva Concept Digital?</label>
+                    <div class="accordion-content">
+                        <p>we offer a wide range of courses to cater to the varied needs and interests of our students. These include programming languages such as Java, Python, C++, and PHP, as well as web development, mobile app development, data science,
+                            artificial intelligence, and machine learning courses. We also offer specialized courses in areas such as database management, cloud computing, cybersecurity, and software testing. With our comprehensive range of courses,
+                            we aim to provide our students with the knowledge and skills required to succeed in the dynamic and rapidly evolving field of programming.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle4" class="accordion-toggle1" name="toggle">
+                    <label for="toggle4">What is Career in java, python, react, etc?</label>
+                    <div class="accordion-content">
+                        <a class="nav-link" style="padding-left: 10px; font-weight:bolder; color:black;" href="./e-counselling">e-Counselling</a>
+                    </div>
+                </div>
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle5" class="accordion-toggle1" name="toggle">
+                    <label for="toggle5">Which are best courses for job? </label>
+                    <div class="accordion-content">
+                        <p> PYTHON, JAVA, react are the best technology for Job.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle6" class="accordion-toggle1" name="toggle">
+                    <label for="toggle6">How will I get the course completion certificate?</label>
+                    <div class="accordion-content">
+                        <p>Every course has a Quiz/Assignment. Once you complete the Quiz/Assignment, the course completion certificate will be available in your dashboard within 24 Hours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle7" class="accordion-toggle1" name="toggle">
+                    <label for="toggle7">Which technology is best for learning? </label>
+                    <div class="accordion-content">
+                        <p>The best technology for learning depends on your personal interests, career goals, and the current demand in the job market. Some of the most popular and in-demand technologies currently include web development frameworks such
+                            as React and Angular, programming languages such as Python and Java, data science tools such as R and Python, cloud computing platforms such as AWS and Azure, and mobile app development frameworks such as Flutter and React
+                            Native. It's important to do your own research and choose a technology that aligns with your interests and career goals, and that has a high demand in the job market. If you don't know which technology you should choose
+                            so call/visit shiva concept Digital we will help you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle8" class="accordion-toggle1" name="toggle">
+                    <label for="toggle8">What is time duration of courses?</label>
+                    <div class="accordion-content">
+                        <p>The time duration of the courses are 4 to 6 months for Job assistance, 2 to 3 months for certification and 6 to 8 months for corporate.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle9" class="accordion-toggle1" name="toggle">
+                    <label for="toggle9">What are the most popular course offered by Shiva Concept
+                        Digital?</label>
+                    <div class="accordion-content">
+                        <p>Corporate courses are most popular courses by SCS, we provide 100% placement assurance on that courses and provide project certification as well.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle10" class="accordion-toggle1" name="toggle">
+                    <label for="toggle10">How many company tie-up?</label>
+                    <div class="accordion-content">
+                        <p>500+ company in Indore city and 200+ company from outside.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle11" class="accordion-toggle1" name="toggle">
+                    <label for="toggle11">How many mode to pay fees? </label>
+                    <div class="accordion-content">
+                        <p>You can pay fee, online mode also.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab">
+                    <input type="checkbox" id="toggle12" class="accordion-toggle1" name="toggle">
+                    <label for="toggle12">What are my next learning opportunities after completing course from
+                        Shiva Concept Digital? </label>
+                    <div class="accordion-content">
+                        <p>After completing a course from SHIVA CONCEPT Digital, you will have a wide range of learning opportunities to further enhance your skills and knowledge in the field of programming. You can choose for advanced courses that build
+                            upon the concepts covered in your previous course, or you can choose to specialize in a specific area such as web development, mobile app development, data science, or artificial intelligence. Additionally, you can attend
+                            interview, workshops and seminars to learn about the latest industry trends and technologies, and network with other professionals in the field.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="frequently-footer">For any query, please contact us at shivaconceptsolution@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- frequently End -->
+{% endblock %}

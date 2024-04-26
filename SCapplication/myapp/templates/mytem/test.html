@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .container{
+        width: 50%;
+        height: 300px;
+    }
+
+</style>
+</head>
+<body>
+ 
+    
+    
+{% for i,l in payment.items %}
+{% for k in l %} 
+
+
+    <div class="container mb-5">
+        <div class="card">
+          <div class="card-header">
+            <p>{{k.Select}}<p>{% for j in k.Course_Heading.values %} {{j}}  {% endfor %}</p></p>
+          </div>
+          <div class="card-body">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video src="{{k.Paid_Course_video}}" controls>
+                <source src="{{k.Paid_Course_video}}">
+                <source src="{{k.Paid_Course_video}}">
+              </video>
+            </div>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br><br><br><br><br>
+      {% endfor %}
+      {% endfor %}
+      <!-- Bootstrap JS and dependencies -->
+
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    
+
+
+
+</html>

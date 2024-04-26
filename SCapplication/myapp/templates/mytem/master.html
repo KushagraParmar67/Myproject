@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="mthokn96IJeg5AFhOahnrNcJFjIoSIts5XENpGqZ">
+
+    <title>Best Java, Python, .NET Online Courses | Shiva Concept Digital</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <!-- <link rel="dns-prefetch" href="//fonts.bunny.net"> -->
+    <!-- <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> -->
+    <!-- Scripts -->
+    <!-- <script type="module" src="http://[::1]:5173/@vite/client"></script> -->
+    <!-- <link rel="stylesheet" href="http://[::1]:5173/resources/sass/app.scss" /> -->
+    <!-- <script type="module" src="http://[::1]:5173/resources/js/app.js"></script> -->
+    <!-- <meta content="Free HTML Templates" name="keywords"> -->
+    <!-- <meta content="Free HTML Templates" name="description"> -->
+    <!-- Favicon -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link href="/static/mycss/images/urlicon.png" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/mycss/css/style.css" rel="stylesheet">
+    <link href="/static/mycss/css/style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/mycss/css/style3.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+
+    <!-- Preloader -->
+    <!-- Navbar Start -->
+    <style>
+        .container_register_course {
+            border: 1px solid #333;
+            z-index: 10000;
+            background: #000000d4;
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.9);
+            width: 100%;
+            border-radius: 0px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            height: 100%;
+        }
+
+        .container_register_course .register-forms {
+            width: 40%;
+            height: 96%;
+            background-color: white;
+            z-index: 10000;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .register-forms .register-container .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 27px;
+            color: red;
+            cursor: pointer;
+            mix-blend-mode: normal;
+            z-index: 200000000;
+            box-shadow: 0px 0px 2px 1px;
+            border-radius: 50px;
+            padding: 0px 7px;
+        }
+
+        form.register-container {
+            margin: 20px 40px;
+        }
+
+        .row.mb-6.register-container {
+            justify-content: center;
+        }
+
+        /* ---------------------------------------------login------------------ */
+
+        .container_login_course {
+            border: 1px solid #333;
+            z-index: 10000;
+            background: #000000d4;
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.9);
+            width: 100%;
+            border-radius: 0px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            height: 100%;
+        }
+
+        .container_login_course .login-forms {
+            width: 40%;
+            height: 70%;
+            background-color: white;
+            z-index: 10000;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .login-forms .login-container .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 27px;
+            color: red;
+            cursor: pointer;
+            mix-blend-mode: normal;
+            z-index: 200000000;
+            box-shadow: 0px 0px 2px 1px;
+            border-radius: 50px;
+            padding: 0px 7px;
+        }
+
+        form.login-container {
+            margin: 20px 40px;
+        }
+
+        button#register_login {
+            background: #ff6600;
+            padding: 0 20px;
+            margin: 28px 14px 0px;
+            border-radius: 6px;
+            border: none;
+            text-align: center;
+            height: 46%;
+        }
+
+        .row.mb-6.login-container {
+            justify-content: center;
+        }
+
+        button.btn.btn-primary {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+
+        label.col-md-10.col-form-label.text-md-end {
+            font-weight: bold;
+        }
+        .dropdown-menu >li>a{
+            font-weight: 700;
+font-size: larger;
+        }
+     
+    </style>
+    <div class="container-fluid"  id="main-header-page" style="border-bottom: 1px solid white;
+ position: fixed; z-index: 100;">
+        <div class="row m-0 p-0" style="width: 100%;">
+            <div class="col-lg-12 m-0 p-0" >
+                <nav class="navbar navbar-expand-lg bg-dark navbar-light" style=" background-image: url(/static/mycss/images/headerimg.png);">
+                    <div class="col-12 col-lg-4" id="main_first_logo_navbar">
+                        <a href="/" class="navbar-brand">
+                        <img src="/static/mycss/images/7logos.png" alt="CoolBrand" class="img-fluid"
+                            id="first_logo_1">
+                    </a>
+
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </div>
+                    <div class="col-lg-8 text-center">
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav" id="headernavbar">
+                                <a href="/" class="nav-item nav-link">Home</a>
+                                <a href="/about" class="nav-item nav-link">About</a>
+                                <a href="/course" class="nav-item nav-link">Courses</a>
+                                <a href="https://www.shivatutorials.com/" class="nav-item nav-link">Blog</a>
+                                <a href="/contact" class="nav-item nav-link">Contact</a>
+                                <ul class="navbar-nav ms-auto">
+                                    <!-- Authentication Links -->{% if not request.session.logged %}
+                                    <a href="/login"><button style="font-size: 16px;height: 50px;"  id="register_login" type="submit" class="login-button" >login
+                                        </button></a>
+
+                                   <a href="/register"> <button style="font-size: 16px; margin-left: 30px;height: 50px;"  id="register_login" type="submit" class="login-button">Register
+                                        </button></a>
+                                      
+                                </ul>
+                              
+                            </div> 
+                            {%  else %}
+                            <span >
+                                
+                            <a href="/logout" >
+                                <button class="btn btn-primary" style="font-size: 16px;height: 50px;"  id="register_login" class="login-button">
+                                <i class="fa fa-sign-out fa-lg"  class="login-button color-primary"> Logout</i>
+                           </button> </a></span>
+                           <span>
+                           <div class="dropdown mx-5 mt-3 ">
+                                <button class="btn btn-primary "  type="button" id="dropdownMenuButto" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Your Courses
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButto">
+                                    {% if keyofpay %}
+                                    <li><a class="dropdown-item text-dark " href="#">{{keyofpay}}</a></li>  
+                                        {% else %}
+                                        <li><a class="dropdown-item text-dark " href="#">No Course </a></li>  
+                                        {% endif %}
+                                </ul>
+                              </div>
+                           </span>
+                           {% endif %}
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+   
+
+    <!-- Navbar End -->
+{% block ABC %}
+
+{% endblock %}
+
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+    <div class="container-fluid text-white px-sm-3 px-lg-5 " style="margin-top: 10px; background-image: url(/static/mycss/images/headerimg.png);">
+        <div class="row pt-5">
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="text-primary text-uppercase mr-2 mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker mr-2"></i>M6 First Floor, Kanchan Sagar Near Industry House, Palasia A.B Road, Indore, India</p>
+                        <p><i class="fa fa-phone " aria-hidden="true">&nbsp;</i>+91-7805063968</p>
+                        <p><i class="fa fa-envelope mr-2"></i>shivaconceptsolution@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-squutioare mr-2" href="https://www.youtube.com/@ShivaConceptSolution"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="https://www.facebook.com/shivagautamconcept/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="https://www.linkedin.com/in/shivagtm/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="https://www.instagram.com/shiva.gtmscs/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="https://github.com/shivaconceptsolution"><i
+                                class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-primary text-uppercase mr-2 mb-4" style="letter-spacing: 5px;">Important Pages</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="/"><i
+                                class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About</a>
+                            <a class="text-white mb-2" href="/course"><i class="fa fa-angle-right mr-2"></i>Course</a>
+                            <a class="text-white mb-2" href="https://www.shivatutorials.com/"><i
+                                class="fa fa-angle-right mr-2"></i>Blog</a>
+                            <a class="text-white" href="/contact"><i
+                                class="fa fa-angle-right mr-2"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 ">
+                <h5 class="text-primary text-uppercase mr-2 mb-4" style="letter-spacing: 5px;">Course Content</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="/oncourse/1"><i
+                        class="fa fa-angle-right mr-2"></i>.Net</a>
+                    <a class="text-white mb-2" href="/oncourse/2"><i
+                        class="fa fa-angle-right mr-2"></i>Javascript</a>
+                    <a class="text-white mb-2" href="/oncourse/3"><i
+                        class="fa fa-angle-right mr-2"></i>Python
+                    Interview</a>
+                    <a class="text-white mb-2" href="/oncourse/4"><i
+                        class="fa fa-angle-right mr-2"></i>Java
+                    interview</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="row">
+                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#"></a>2013-2022 All rights reserved by Shiva Concept Digital,
+                        <a href="https://kangaroosoftware.net/">Kangaroo Software
+                    </a>
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center text-md-right">
+                    <ul class="nav d-inline-flex">
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="/privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="/terms">Terms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="/Faqs">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="/contact">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script>
+        setTimeout(function() {
+            $(".alert-success").hide();
+        }, 6000);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/mycss/js/main.js"></script>
+    <script src="/static/mycss/js/script.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                facebook: "733555096659161", // Facebook page ID
+                whatsapp: "+917805063968", // WhatsApp number
+                call_to_action: "Message us", // Call to action
+                button_color: "#FF6550", // Color of button
+                position: "left", // Position may be 'right' or 'left'
+                order: "facebook,whatsapp", // Order of buttons
+            };
+            var proto = document.location.protocol,
+                host = "getbutton.io",
+                url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+
+
+</body>
+
+</html>

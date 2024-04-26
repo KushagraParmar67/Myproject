@@ -1,0 +1,60 @@
+{% extends 'mytem/master.html' %}
+
+{% block ABC %}
+ <!-- Courses Start -->
+ <div class="container-fluid" style="background: #fbf8ff;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="pt-5">Our Popular Courses</h1>
+        </div>
+        <div class="row">
+{% for i in Course %}
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a class="h5" href="/oncourse/{{i.id}}"
+                        id="courses_title_first">
+                        <div class="rounded overflow-hidden mb-2">
+                            <div class="courses-image-hight">
+                                <img class="img-fluid" style="height: 100%; width:100%;"
+                                    src="/static/mycss/Dbimages/{{i.Course_image}}" alt="">
+                            </div>
+                            <div class="bg-secondary p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i
+                                            class="fa fa-users text-primary mr-2"></i>{{i.Course_students}}   Students</small>
+                                    <small class="m-0"><i
+                                            class="far fa-clock text-primary mr-2"></i>{{i.Course_time}}</small>
+                                </div>
+                                <div class="courses_container_main">
+                                    {{i.Course_name}}
+                                </div>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="row" id="courses_row_price_part">
+                                            <div class="courses_price_first">
+                                                <h6 class="m-0"><i
+                                                        class="fa fa-star text-primary mr-2"></i>{{i.Course_rating}}
+                                                </h6>
+                                            </div>
+                                            <div class="courses_price_second">
+                                                <h5 class="m-0" style="font-size: 16px;"><i class="fa fa-inr"
+                                                        aria-hidden="true"></i>
+                                                   {{i.Course_price}}</h5>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+
+
+
+{% endblock %}
